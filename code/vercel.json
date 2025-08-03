@@ -1,0 +1,47 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "services/orchestrator/orchestrator.py",
+      "use": "@vercel/python"
+    },
+    {
+      "src": "services/images/images_service.py",
+      "use": "@vercel/python"
+    },
+    {
+      "src": "services/videos/videos_service.py",
+      "use": "@vercel/python"
+    },
+    {
+      "src": "services/audio/audio_service.py",
+      "use": "@vercel/python"
+    },
+    {
+      "src": "services/text/text_service.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/orchestrator",
+      "dest": "/services/orchestrator/orchestrator.py"
+    },
+    {
+      "src": "/api/images",
+      "dest": "/services/images/images_service.py"
+    },
+    {
+      "src": "/api/videos",
+      "dest": "/services/videos/videos_service.py"
+    },
+    {
+      "src": "/api/audio",
+      "dest": "/services/audio/audio_service.py"
+    },
+    {
+      "src": "/api/text",
+      "dest": "/services/text/text_service.py"
+    }
+  ]
+}
