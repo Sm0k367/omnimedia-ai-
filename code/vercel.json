@@ -20,6 +20,10 @@
     {
       "src": "services/text/text_service.py",
       "use": "@vercel/python"
+    },
+    {
+      "src": "index.html",
+      "use": "@vercel/static"
     }
   ],
   "routes": [
@@ -42,6 +46,10 @@
     {
       "src": "/api/text",
       "dest": "/services/text/text_service.py"
+    },
+    {
+      "src": "/",
+      "dest": "/index.html"
     }
   ]
 }
