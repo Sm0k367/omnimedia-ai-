@@ -24,6 +24,10 @@
     {
       "src": "index.html",
       "use": "@vercel/static"
+    },
+    {
+      "src": "docs/api_reference.md",
+      "use": "@vercel/static"
     }
   ],
   "routes": [
@@ -50,6 +54,10 @@
     {
       "src": "/",
       "dest": "/index.html"
+    },
+    {
+      "src": "/docs",
+      "dest": "/docs/api_reference.md"
     }
   ]
 }
