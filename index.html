@@ -3,44 +3,161 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OmniMedia AI</title>
+    <title>OmniMedia AI — Create Anything</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
+        
         body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f0f0f0;
+            font-family: 'Inter', sans-serif;
         }
-        .container {
-            text-align: center;
+        .heading {
+            font-family: 'Space Grotesk', sans-serif;
         }
-        h1 {
-            color: #333;
+        .hero-bg {
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a0033 100%);
         }
-        p {
-            color: #666;
-        }
-        a {
-            color: #0070f3;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
+        .glass {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
         }
     </style>
 </head>
-<body>
-    <div class="container">
-        <h1>Welcome to OmniMedia AI</h1>
-        <p>Generate high-quality videos, images, audio, and text content with ease.</p>
-        <p>
-            <a href="https://github.com/Sm0k367/omnimedia-ai-" target="_blank">GitHub Repository</a> |
-            <a href="/docs" target="_blank">API Documentation</a>
-        </p>
-    </div>
+<body class="bg-black text-white overflow-x-hidden">
+    <!-- Navbar -->
+    <nav class="fixed top-0 w-full z-50 glass border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="w-8 h-8 bg-gradient-to-br from-purple-600 to-pink-600 rounded-xl flex items-center justify-center text-xl font-bold">O</div>
+                <span class="text-2xl font-bold heading tracking-tight">OmniMedia AI</span>
+            </div>
+            <div class="hidden md:flex items-center gap-8">
+                <a href="#features" class="hover:text-purple-400 transition">Features</a>
+                <a href="#showcase" class="hover:text-purple-400 transition">Showcase</a>
+                <a href="#tech" class="hover:text-purple-400 transition">Technology</a>
+            </div>
+            <a href="https://github.com/Sm0k367/omnimedia-ai-" target="_blank"
+               class="px-6 py-3 bg-white text-black font-semibold rounded-2xl hover:bg-purple-600 hover:text-white transition flex items-center gap-2">
+                <i class="fab fa-github"></i> Star on GitHub
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero-bg min-h-screen flex items-center pt-20 relative">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+            <div class="space-y-8">
+                <div class="inline-flex items-center gap-2 px-4 py-2 bg-white/5 rounded-full text-sm">
+                    <span class="relative flex h-3 w-3">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-3 w-3 bg-emerald-500"></span>
+                    </span>
+                    Now in Early Access
+                </div>
+                
+                <h1 class="heading text-7xl md:text-8xl font-bold leading-none tracking-tighter">
+                    Create the<br>impossible.
+                </h1>
+                
+                <p class="text-2xl text-gray-400 max-w-lg">
+                    One platform. Every medium.<br>
+                    <span class="text-purple-400">Video • Images • Audio • Text</span>
+                </p>
+                
+                <div class="flex flex-wrap gap-4">
+                    <a href="#" 
+                       class="px-10 py-4 bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl font-semibold text-lg hover:scale-105 transition flex items-center gap-3">
+                        <i class="fas fa-rocket"></i>
+                        Launch Studio
+                    </a>
+                    <a href="https://github.com/Sm0k367/omnimedia-ai-" target="_blank"
+                       class="px-10 py-4 border border-white/30 hover:border-white/70 rounded-3xl font-semibold text-lg transition">
+                        View Repository
+                    </a>
+                </div>
+                
+                <div class="flex items-center gap-8 text-sm text-gray-400">
+                    <div>⭐ Trusted by creators worldwide</div>
+                    <div class="flex -space-x-3">
+                        <div class="w-8 h-8 bg-purple-600 rounded-full border-2 border-black flex items-center justify-center text-xs">AI</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="relative">
+                <img src="https://i.imgur.com/PLACEHOLDER.jpg" 
+                     alt="OmniMedia AI Interface" 
+                     class="rounded-3xl shadow-2xl border border-white/10">
+                <div class="absolute -bottom-6 -left-6 glass p-6 rounded-3xl border border-white/10">
+                    <div class="text-emerald-400 text-sm font-medium">Generation in progress</div>
+                    <div class="text-4xl font-bold heading">47s</div>
+                    <div class="text-gray-400">Cinematic video • 4K</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
+            <i class="fas fa-chevron-down text-3xl text-gray-500"></i>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section id="features" class="py-24 bg-zinc-950">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="heading text-6xl font-bold mb-4">All Media. One Brain.</h2>
+                <p class="text-xl text-gray-400">Orchestrated by intelligent agents working together.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="glass p-8 rounded-3xl border border-white/10 hover:border-purple-500/50 transition group">
+                    <div class="w-14 h-14 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center text-3xl mb-6">🎥</div>
+                    <h3 class="text-3xl font-semibold mb-3">Video Forge</h3>
+                    <p class="text-gray-400">Text-to-video, image-to-video, multi-shot cinematic generation with perfect consistency.</p>
+                </div>
+                <div class="glass p-8 rounded-3xl border border-white/10 hover:border-purple-500/50 transition group">
+                    <div class="w-14 h-14 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center text-3xl mb-6">🖼️</div>
+                    <h3 class="text-3xl font-semibold mb-3">Visual Studio</h3>
+                    <p class="text-gray-400">Ultra-realistic image generation, inpainting, upscaling, and style transfer.</p>
+                </div>
+                <div class="glass p-8 rounded-3xl border border-white/10 hover:border-purple-500/50 transition group">
+                    <div class="w-14 h-14 bg-gradient-to-br from-amber-500 to-orange-500 rounded-2xl flex items-center justify-center text-3xl mb-6">🎙️</div>
+                    <h3 class="text-3xl font-semibold mb-3">Sonic Lab</h3>
+                    <p class="text-gray-400">Voice cloning, music generation, sound effects, and full audio post-production.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-24 bg-gradient-to-b from-transparent via-purple-950/30 to-transparent">
+        <div class="max-w-4xl mx-auto text-center px-6">
+            <h2 class="heading text-6xl font-bold mb-6">Ready to create at lightspeed?</h2>
+            <p class="text-2xl text-gray-400 mb-10">Join the future of media creation.</p>
+            <a href="https://github.com/Sm0k367/omnimedia-ai-" target="_blank"
+               class="inline-flex items-center gap-4 px-12 py-6 text-2xl font-semibold bg-white text-black rounded-3xl hover:bg-gradient-to-r hover:from-purple-600 hover:to-pink-600 hover:text-white transition">
+                Get Started Free →
+            </a>
+        </div>
+    </section>
+
+    <footer class="border-t border-white/10 py-12">
+        <div class="max-w-7xl mx-auto px-6 text-center text-gray-500">
+            <p>© 2026 OmniMedia AI • Built with 🔥 by @Sm0k367</p>
+        </div>
+    </footer>
+
+    <script>
+        // Simple scroll animation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 </html>
