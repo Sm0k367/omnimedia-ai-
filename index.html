@@ -3,181 +3,158 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OmniMedia AI — Forge Realities</title>
+    <title>OMNIMEDIA CORE v0.9</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&display=swap');
         
-        body { font-family: 'Inter', sans-serif; background: #000; }
-        .heading { font-family: 'Space Grotesk', sans-serif; }
+        body {
+            font-family: 'VT323', monospace;
+            background: #0a0a0a;
+            color: #00ff9f;
+            overflow-x: hidden;
+        }
+        .header-font { font-family: 'Space Grotesk', sans-serif; }
         
-        .hero-bg {
-            background: radial-gradient(circle at 30% 20%, rgba(139, 92, 246, 0.35) 0%, transparent 50%),
-                        radial-gradient(circle at 70% 80%, rgba(236, 72, 153, 0.3) 0%, transparent 60%),
-                        #050505;
+        .scanline {
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: linear-gradient(transparent, rgba(0, 255, 159, 0.08), transparent);
+            background-size: 100% 300%;
+            pointer-events: none;
+            animation: scan 7s linear infinite;
+            z-index: 10;
+            opacity: 0.4;
         }
         
-        .glass { background: rgba(255,255,255,0.06); backdrop-filter: blur(32px); border: 1px solid rgba(255,255,255,0.12); }
-        .neon-glow { text-shadow: 0 0 50px rgb(167 139 250), 0 0 90px rgb(236 72 153); }
+        @keyframes scan { 0% { background-position: 0 0; } 100% { background-position: 0 300%; } }
         
-        .card-hover { transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1); }
-        .card-hover:hover { transform: translateY(-25px) scale(1.05); box-shadow: 0 50px 120px -30px rgb(167 139 250 / 0.4); }
+        .crt {
+            filter: contrast(1.2) brightness(1.1);
+        }
         
-        .heart-beat { animation: heartbeat 2s infinite; }
-        @keyframes heartbeat { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.15); } }
+        .terminal-line {
+            animation: typing 1.5s steps(40, end) forwards;
+            overflow: hidden;
+            white-space: nowrap;
+        }
     </style>
 </head>
-<body class="text-white overflow-x-hidden">
+<body class="crt">
 
-    <!-- Navbar -->
-    <nav class="fixed top-0 w-full z-50 glass border-b border-white/10">
-        <div class="max-w-7xl mx-auto px-8 py-6 flex justify-between items-center">
+    <div class="scanline"></div>
+
+    <!-- HEADER / SYSTEM STATUS -->
+    <div class="border-b border-[#00ff9f]/30 bg-black/80 backdrop-blur-md fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-8 py-4 flex justify-between items-center">
             <div class="flex items-center gap-4">
-                <div class="w-11 h-11 bg-gradient-to-br from-violet-500 via-fuchsia-500 to-cyan-400 rounded-3xl flex items-center justify-center text-3xl font-black rotate-12">Ω</div>
-                <span class="text-3xl font-bold heading tracking-tighter">OMNIMEDIA AI</span>
+                <div class="w-6 h-6 border-2 border-[#00ff9f] flex items-center justify-center text-xs rotate-45">◼</div>
+                <span class="header-font text-2xl tracking-widest">OMNIMEDIA CORE v0.9</span>
             </div>
-            <div class="hidden md:flex gap-10 text-lg font-medium">
-                <a href="#agents" class="hover:text-violet-400 transition">The Agents</a>
-                <a href="#showcase" class="hover:text-violet-400 transition">Creations</a>
-                <a href="#contact" class="hover:text-violet-400 transition">Contact</a>
-            </div>
-            <div class="flex items-center gap-4">
-                <a href="https://github.com/Sm0k367/omnimedia-ai-" target="_blank" class="px-6 py-3 border border-white/30 hover:border-white rounded-3xl flex items-center gap-3 transition hover:bg-white/5">
-                    <i class="fab fa-github"></i>
-                </a>
+            <div class="flex items-center gap-8 text-sm">
+                <div class="text-emerald-400 flex items-center gap-2">
+                    <div class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></div>
+                    ONLINE
+                </div>
+                <a href="https://github.com/Sm0k367/omnimedia-ai-" target="_blank" class="hover:text-white transition">REPOSITORY</a>
+                <a href="#contact" class="hover:text-white transition">CONNECT</a>
                 <a href="https://buy.stripe.com/7sI3dlgcQ4uL0gMeUW" target="_blank" 
-                   class="px-8 py-3 bg-gradient-to-r from-pink-500 to-rose-500 text-white font-semibold rounded-3xl flex items-center gap-3 hover:brightness-110 transition">
-                    <i class="fas fa-heart heart-beat"></i> Support
+                   class="bg-red-600 hover:bg-red-500 px-6 py-2 text-white transition flex items-center gap-2">
+                    <i class="fas fa-heart"></i> FUEL CORE
                 </a>
             </div>
         </div>
-    </nav>
+    </div>
 
-    <!-- HERO -->
-    <section class="hero-bg min-h-screen flex items-center relative pt-20">
-        <div class="max-w-7xl mx-auto px-8 grid md:grid-cols-2 gap-16 items-center">
-            <div class="space-y-10">
-                <div class="inline-flex items-center gap-3 px-6 py-3 rounded-3xl bg-white/5 border border-white/10">
-                    <span class="text-emerald-400">● LIVE</span>
-                    <span class="font-medium">EARLY 2026 ACCESS</span>
+    <!-- MAIN TERMINAL -->
+    <section class="min-h-screen flex items-center pt-24 pb-20">
+        <div class="max-w-6xl mx-auto px-8 w-full">
+            <div class="border border-[#00ff9f]/40 bg-black/70 p-10">
+                <div class="mb-12">
+                    <div class="text-xs text-gray-400 mb-2">SYSTEM BOOT SEQUENCE // 2026</div>
+                    <h1 class="header-font text-7xl md:text-8xl leading-none tracking-tighter text-white">
+                        YOU ARE NOW<br>INSIDE THE CORE
+                    </h1>
+                    <p class="text-2xl mt-6 text-[#00ff9f]/80 max-w-2xl">
+                        One prompt. Five autonomous agents. Infinite media realities.<br>
+                        This is not another AI tool. This is a creative intelligence system.
+                    </p>
                 </div>
-                
-                <h1 class="heading text-7xl md:text-[6.5rem] leading-[0.92] font-bold tracking-tighter neon-glow">
-                    ONE THOUGHT.<br>
-                    INFINITE<br>
-                    <span class="bg-clip-text text-transparent bg-gradient-to-r from-violet-400 via-pink-400 to-cyan-400">REALITIES.</span>
-                </h1>
-                
-                <p class="text-2xl md:text-3xl text-gray-300">
-                    The most powerful open-source AI media orchestration platform.
-                </p>
-                
-                <div class="flex flex-wrap gap-5">
+
+                <!-- Fake Terminal Output -->
+                <div class="bg-black border border-[#00ff9f]/30 p-8 font-mono text-sm leading-relaxed mb-16">
+                    <div class="terminal-line">> INITIALIZING VIDEO FORGE AGENT...</div>
+                    <div class="terminal-line">> VISUAL ALCHEMIST ONLINE</div>
+                    <div class="terminal-line">> SONIC ARCHITECT AWAKENED</div>
+                    <div class="terminal-line text-yellow-300">> OMNI CONDUCTOR SYNC COMPLETE ✓</div>
+                    <div class="text-emerald-400 mt-6">&gt; READY TO MANIFEST YOUR VISION</div>
+                </div>
+
+                <div class="flex flex-wrap gap-6">
                     <a href="https://buy.stripe.com/7sI3dlgcQ4uL0gMeUW" target="_blank"
-                       class="px-14 py-7 text-2xl font-bold rounded-3xl bg-gradient-to-r from-pink-500 to-rose-500 hover:scale-105 transition flex items-center gap-4">
-                        <i class="fas fa-heart"></i> Show Love
+                       class="flex-1 min-w-[280px] bg-red-600 hover:bg-red-500 transition py-8 text-center text-2xl font-bold text-white">
+                        FUEL THE CORE ❤️
                     </a>
                     <a href="https://github.com/Sm0k367/omnimedia-ai-" target="_blank"
-                       class="px-14 py-7 text-2xl font-semibold rounded-3xl border border-white/40 hover:bg-white/10 transition">
-                        Star Project
+                       class="flex-1 min-w-[280px] border border-[#00ff9f]/50 hover:border-white transition py-8 text-center text-2xl font-bold">
+                        ACCESS REPOSITORY
                     </a>
                 </div>
             </div>
-            
-            <div class="relative">
-                <div class="aspect-video bg-black rounded-3xl overflow-hidden border border-violet-500/40 shadow-2xl">
-                    <img src="https://picsum.photos/id/1015/1400/800" alt="OmniMedia" class="w-full h-full object-cover">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
-                    <div class="absolute bottom-8 left-8 glass p-6 rounded-2xl">
-                        <div class="text-emerald-400 text-sm font-medium">MULTI-AGENT GENERATION</div>
-                        <div class="text-4xl font-bold heading">Cyberpunk Dreamscape</div>
-                    </div>
-                </div>
-            </div>
         </div>
     </section>
 
-    <!-- SUPPORT -->
-    <section class="py-24 bg-gradient-to-b from-zinc-950 to-black border-y border-white/10">
-        <div class="max-w-4xl mx-auto text-center px-6">
-            <div class="text-6xl mb-6">❤️</div>
-            <h2 class="heading text-6xl font-bold mb-6">Fuel This Vision</h2>
-            <p class="text-2xl text-gray-300 mb-10">
-                Every contribution helps buy more GPUs and push this project forward for the entire community.
-            </p>
-            <a href="https://buy.stripe.com/7sI3dlgcQ4uL0gMeUW" target="_blank"
-               class="inline-flex items-center gap-5 px-20 py-10 text-3xl font-bold rounded-3xl bg-gradient-to-r from-pink-500 via-rose-500 to-purple-600 hover:scale-110 transition-all">
-                <i class="fas fa-heart heart-beat text-4xl"></i>
-                SUPPORT THE DREAM
-            </a>
-        </div>
-    </section>
-
-    <!-- Agents -->
-    <section id="agents" class="py-28 bg-black">
-        <div class="max-w-7xl mx-auto px-8 text-center">
-            <h2 class="heading text-6xl font-bold mb-20">Five Agents.<br>One Soul.</h2>
+    <!-- AGENTS GRID -->
+    <section class="py-20 border-t border-[#00ff9f]/20 bg-black">
+        <div class="max-w-6xl mx-auto px-8">
+            <h2 class="text-center text-5xl mb-16 header-font">ACTIVE AGENTS</h2>
             <div class="grid md:grid-cols-5 gap-6">
-                <div class="glass p-8 rounded-3xl card-hover text-center">🎬<br><b>Video Forge</b></div>
-                <div class="glass p-8 rounded-3xl card-hover text-center">🖼️<br><b>Visual Alchemist</b></div>
-                <div class="glass p-8 rounded-3xl card-hover text-center">🎙️<br><b>Sonic Architect</b></div>
-                <div class="glass p-8 rounded-3xl card-hover text-center">📝<br><b>Narrative Core</b></div>
-                <div class="glass p-8 rounded-3xl card-hover text-center border-2 border-violet-500">🧠<br><b>Omni Conductor</b></div>
+                <div class="border border-[#00ff9f]/30 p-8 hover:bg-[#00ff9f]/5 transition text-center">🎬 VIDEO FORGE</div>
+                <div class="border border-[#00ff9f]/30 p-8 hover:bg-[#00ff9f]/5 transition text-center">🖼️ VISUAL ALCHEMIST</div>
+                <div class="border border-[#00ff9f]/30 p-8 hover:bg-[#00ff9f]/5 transition text-center">🎙️ SONIC ARCHITECT</div>
+                <div class="border border-[#00ff9f]/30 p-8 hover:bg-[#00ff9f]/5 transition text-center">📝 NARRATIVE CORE</div>
+                <div class="border border-[#00ff9f]/30 p-8 hover:bg-[#00ff9f]/5 transition text-center bg-[#00ff9f]/10">🧠 OMNI CONDUCTOR</div>
             </div>
         </div>
     </section>
 
-    <!-- CONTACT -->
-    <section id="contact" class="py-24 bg-zinc-950">
+    <!-- CONTACT + SUPPORT -->
+    <section id="contact" class="py-20 bg-black border-t border-[#00ff9f]/20">
         <div class="max-w-4xl mx-auto px-8 text-center">
-            <h2 class="heading text-5xl font-bold mb-10">Let's Build The Future Together</h2>
+            <h2 class="text-5xl header-font mb-12">ESTABLISH CONNECTION</h2>
             
             <div class="grid md:grid-cols-3 gap-8">
-                <a href="https://x.com/Sm0k367" target="_blank" 
-                   class="glass p-8 rounded-3xl hover:border-violet-400 transition flex flex-col items-center gap-4">
-                    <i class="fab fa-x-twitter text-4xl"></i>
-                    <div>
-                        <div class="font-semibold">@Sm0k367</div>
-                        <div class="text-sm text-gray-400">Follow the journey</div>
-                    </div>
+                <a href="https://x.com/Sm0k367" target="_blank" class="border border-[#00ff9f]/30 p-8 hover:bg-[#00ff9f]/5 transition">
+                    <i class="fab fa-x-twitter text-4xl mb-4"></i><br>
+                    @Sm0k367
                 </a>
-                
-                <a href="https://github.com/Sm0k367" target="_blank" 
-                   class="glass p-8 rounded-3xl hover:border-violet-400 transition flex flex-col items-center gap-4">
-                    <i class="fab fa-github text-4xl"></i>
-                    <div>
-                        <div class="font-semibold">Sm0k367</div>
-                        <div class="text-sm text-gray-400">Contribute • Issues • Ideas</div>
-                    </div>
+                <a href="https://github.com/Sm0k367" target="_blank" class="border border-[#00ff9f]/30 p-8 hover:bg-[#00ff9f]/5 transition">
+                    <i class="fab fa-github text-4xl mb-4"></i><br>
+                    Sm0k367
                 </a>
-                
-                <div class="glass p-8 rounded-3xl flex flex-col items-center gap-4">
-                    <i class="fas fa-envelope text-4xl text-violet-400"></i>
-                    <div>
-                        <div class="font-semibold">hello@omnimedia.ai</div>
-                        <div class="text-sm text-gray-400">Business • Partnerships • Feedback</div>
-                    </div>
+                <div class="border border-[#00ff9f]/30 p-8">
+                    <i class="fas fa-envelope text-4xl mb-4"></i><br>
+                    hello@omnimedia.ai
                 </div>
+            </div>
+
+            <div class="mt-20">
+                <a href="https://buy.stripe.com/7sI3dlgcQ4uL0gMeUW" target="_blank"
+                   class="inline-block px-16 py-8 text-3xl border-2 border-red-500 hover:bg-red-600 hover:text-white transition">
+                    SUPPORT THE CORE
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- Final CTA -->
-    <section class="py-20 text-center">
-        <a href="https://buy.stripe.com/7sI3dlgcQ4uL0gMeUW" target="_blank"
-           class="inline-block px-16 py-8 text-3xl font-bold rounded-3xl bg-white text-black hover:bg-gradient-to-r hover:from-pink-500 hover:to-violet-500 hover:text-white transition-all">
-            Support The Project ❤️
-        </a>
-    </section>
-
-    <footer class="bg-black border-t border-white/10 py-12 text-center text-gray-500">
-        <p class="text-xl">© 2026 OmniMedia AI • Built with blood, sweat & love by @Sm0k367</p>
-        <p class="mt-2">LFG • Open Source • Self-Hostable</p>
+    <footer class="py-12 text-center text-xs text-gray-500 border-t border-[#00ff9f]/10">
+        © 2026 OMNIMEDIA AI • BUILT BY @SM0K367 • LFG
     </footer>
 
     <script>
-        console.log("%c❤️ OmniMedia AI — Double 1000X Loaded. LFG!", "color:#ec4899; font-size:15px; font-family:monospace");
+        console.log("%c⚡ CONNECTED TO OMNIMEDIA CORE", "color:#00ff9f; font-family:monospace");
     </script>
 </body>
 </html>
