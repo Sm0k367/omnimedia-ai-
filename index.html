@@ -3,102 +3,122 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OmniMedia AI</title>
+    <title>OMNIMEDIA AI</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=Inter:wght@400;500;600&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&display=swap');
         
         body {
-            font-family: 'Inter', sans-serif;
-            background: #000;
-            color: white;
-        }
-        .heading {
             font-family: 'Space Grotesk', sans-serif;
+            background: #111111;
+            color: #eeeeee;
+            line-height: 1.1;
         }
-        .hero-bg {
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.85)), 
-                        url('https://picsum.photos/id/1015/2000/1200') center/cover fixed;
+        
+        .brutalist-border {
+            border: 4px solid #eeeeee;
+        }
+        
+        .mono {
+            font-family: monospace;
         }
     </style>
 </head>
-<body>
+<body class="min-h-screen">
 
-    <nav class="fixed top-0 w-full z-50 bg-black/95 backdrop-blur-xl border-b border-white/10">
-        <div class="max-w-7xl mx-auto px-8 py-6 flex justify-between items-center">
-            <div class="flex items-center gap-4">
-                <div class="w-11 h-11 bg-white text-black font-black text-4xl flex items-center justify-center rounded-2xl">Ω</div>
-                <span class="heading text-3xl font-bold tracking-tighter">OmniMedia AI</span>
+    <!-- NAV -->
+    <nav class="border-b-4 border-white bg-black py-8">
+        <div class="max-w-7xl mx-auto px-8 flex justify-between items-center">
+            <div class="flex items-center gap-6">
+                <div class="w-12 h-12 border-4 border-white flex items-center justify-center text-4xl font-black">Ω</div>
+                <div>
+                    <span class="text-4xl font-bold tracking-tighter">OMNIMEDIA</span><br>
+                    <span class="text-xs tracking-[4px] mono">AI</span>
+                </div>
             </div>
-            <div class="flex gap-10 text-sm font-medium">
-                <a href="#agents" class="hover:text-white transition">Agents</a>
-                <a href="#contact" class="hover:text-white transition">Contact</a>
+            <div class="flex gap-12 text-lg font-medium">
+                <a href="#agents" class="hover:text-white">AGENTS</a>
+                <a href="#contact" class="hover:text-white">CONTACT</a>
             </div>
         </div>
     </nav>
 
     <!-- HERO -->
-    <section class="hero-bg min-h-screen flex items-center pt-20 relative">
-        <div class="max-w-7xl mx-auto px-8 grid md:grid-cols-2 gap-16 items-center">
-            <div class="space-y-10">
-                <div class="inline-flex px-6 py-3 bg-white/10 backdrop-blur rounded-full text-sm font-medium border border-white/20">
-                    OPEN SOURCE • SELF HOSTED • 2026
-                </div>
+    <section class="min-h-screen flex items-center border-b-4 border-white">
+        <div class="max-w-7xl mx-auto px-8 py-24">
+            <div class="max-w-3xl">
+                <div class="mono text-sm tracking-widest mb-6">SELF-HOSTED • MULTI-AGENT • RAW POWER</div>
                 
-                <h1 class="heading text-7xl md:text-[6.5rem] leading-none font-bold tracking-tighter">
-                    THE COMPLETE<br>AI MEDIA<br>ORCHESTRATION<br>PLATFORM
+                <h1 class="text-8xl md:text-[7.5rem] font-bold leading-none tracking-tighter">
+                    ONE SYSTEM.<br>
+                    ALL MEDIA.
                 </h1>
                 
-                <p class="text-2xl text-gray-300 max-w-md">
-                    Five specialized agents. One unified system.<br>
-                    Create video, images, audio and stories together.
+                <p class="mt-12 text-3xl text-gray-400 max-w-lg">
+                    Five brutal agents.<br>
+                    No bullshit. No limits.
                 </p>
                 
-                <div class="flex gap-5">
+                <div class="mt-16">
                     <a href="https://buy.stripe.com/7sI3dlgcQ4uL0gMeUW" target="_blank"
-                       class="px-10 py-6 bg-white text-black font-semibold rounded-3xl text-lg hover:scale-105 transition">
-                        Support The Project
+                       class="inline-block border-4 border-white px-16 py-8 text-2xl font-bold hover:bg-white hover:text-black transition-all">
+                        SUPPORT THE BUILD
                     </a>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- AGENTS -->
+    <section id="agents" class="py-32 border-b-4 border-white bg-black">
+        <div class="max-w-7xl mx-auto px-8">
+            <h2 class="text-6xl font-bold mb-20">THE AGENTS</h2>
             
-            <div class="relative">
-                <div class="rounded-3xl overflow-hidden border border-white/20 shadow-2xl">
-                    <img src="https://picsum.photos/id/1015/1400/900" 
-                         alt="OmniMedia AI" 
-                         class="w-full">
+            <div class="grid md:grid-cols-5 gap-8">
+                <div class="brutalist-border p-10 bg-black">
+                    <div class="text-6xl mb-8">🎬</div>
+                    <h3 class="text-3xl font-bold">VIDEO FORGE</h3>
+                    <p class="mt-6 text-gray-400">Cinematic video generation</p>
+                </div>
+                <div class="brutalist-border p-10 bg-black">
+                    <div class="text-6xl mb-8">🖼️</div>
+                    <h3 class="text-3xl font-bold">VISUAL ALCHEMIST</h3>
+                    <p class="mt-6 text-gray-400">Image generation & editing</p>
+                </div>
+                <div class="brutalist-border p-10 bg-black">
+                    <div class="text-6xl mb-8">🎙️</div>
+                    <h3 class="text-3xl font-bold">SONIC ARCHITECT</h3>
+                    <p class="mt-6 text-gray-400">Audio & music creation</p>
+                </div>
+                <div class="brutalist-border p-10 bg-black">
+                    <div class="text-6xl mb-8">📝</div>
+                    <h3 class="text-3xl font-bold">NARRATIVE CORE</h3>
+                    <p class="mt-6 text-gray-400">Story & world building</p>
+                </div>
+                <div class="brutalist-border p-10 bg-white text-black">
+                    <div class="text-6xl mb-8">🧠</div>
+                    <h3 class="text-3xl font-bold">OMNI CONDUCTOR</h3>
+                    <p class="mt-6">The central mind</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Agents -->
-    <section id="agents" class="py-32 bg-zinc-950">
-        <div class="max-w-7xl mx-auto px-8">
-            <h2 class="heading text-6xl font-bold text-center mb-20">Five Agents. One Intelligence.</h2>
-            <div class="grid md:grid-cols-5 gap-8">
-                <div class="p-10 bg-zinc-900 rounded-3xl border border-white/10 hover:border-white transition">🎬 Video Forge</div>
-                <div class="p-10 bg-zinc-900 rounded-3xl border border-white/10 hover:border-white transition">🖼️ Visual Alchemist</div>
-                <div class="p-10 bg-zinc-900 rounded-3xl border border-white/10 hover:border-white transition">🎙️ Sonic Architect</div>
-                <div class="p-10 bg-zinc-900 rounded-3xl border border-white/10 hover:border-white transition">📝 Narrative Core</div>
-                <div class="p-10 bg-gradient-to-br from-violet-900 to-black rounded-3xl border border-violet-400 text-violet-200">🧠 Omni Conductor</div>
+    <!-- CONTACT -->
+    <section id="contact" class="py-32 bg-black">
+        <div class="max-w-4xl mx-auto px-8 text-center">
+            <h2 class="text-6xl font-bold mb-12">TALK TO THE BUILDER</h2>
+            <a href="mailto:epictechai@gmail.com" 
+               class="text-4xl border-b-4 border-white pb-3 hover:text-gray-400 transition">
+                epictechai@gmail.com
+            </a>
+            
+            <div class="mt-24 text-sm mono text-gray-500">
+                BUILT BY @SM0K367 • OPEN SOURCE • NO CORPORATE SHIT
             </div>
         </div>
     </section>
 
-    <!-- Contact -->
-    <section id="contact" class="py-32 bg-black">
-        <div class="max-w-xl mx-auto text-center px-6">
-            <h2 class="heading text-5xl font-bold mb-6">Let's Build Something Real</h2>
-            <a href="mailto:epictechai@gmail.com" class="text-3xl hover:text-violet-400 transition">
-                epictechai@gmail.com
-            </a>
-        </div>
-    </section>
-
-    <footer class="py-12 text-center text-gray-500 text-sm">
-        © 2026 OmniMedia AI • Built by @Sm0k367
-    </footer>
 </body>
 </html>
