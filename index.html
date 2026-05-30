@@ -5,105 +5,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OMNIMEDIA AI — @Sm0ken42O</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&display=swap');
         
         body {
             font-family: 'Space Grotesk', sans-serif;
-            background: #0a0a0a;
-            color: #f1f1f1;
+            background: #000;
+            color: #fff;
         }
-        .video-bg {
+        .neon-video {
             position: absolute;
             top: 0; left: 0; width: 100%; height: 100%;
             object-fit: cover;
             z-index: -1;
-            filter: brightness(0.5) contrast(1.2) saturate(1.6);
-        }
-        .brutal {
-            border: 6px solid #ffffff;
+            filter: brightness(0.45) contrast(1.3) saturate(1.8);
         }
     </style>
 </head>
 <body>
 
-    <!-- NAV -->
-    <nav class="fixed top-0 w-full z-50 bg-black border-b-4 border-white py-6">
+    <nav class="fixed top-0 w-full z-50 bg-black/90 border-b-4 border-[#ff00ff] py-6">
         <div class="max-w-7xl mx-auto px-8 flex justify-between items-center">
             <div class="flex items-center gap-4">
-                <div class="w-12 h-12 border-4 border-white flex items-center justify-center text-4xl font-black">Ω</div>
+                <div class="w-14 h-14 border-4 border-[#00ffff] flex items-center justify-center text-5xl font-black rotate-12">Ω</div>
                 <div class="text-4xl font-bold tracking-tighter">OMNIMEDIA AI</div>
             </div>
-            <div class="text-sm tracking-widest">BY @SM0KEN42O</div>
+            <div class="text-[#ff00ff] tracking-widest text-sm">BY @SM0KEN42O • EPIC TECH AI 🔥</div>
         </div>
     </nav>
 
-    <!-- HERO WITH VIBRANT NEON VIDEO -->
+    <!-- HERO WITH STRONG NEON BACKGROUND -->
     <section class="relative min-h-screen flex items-center overflow-hidden">
-        <!-- Rich Neon Cyberpunk Background -->
-        <video class="video-bg" autoplay loop muted playsinline>
+        <video class="neon-video" autoplay loop muted playsinline>
             <source src="https://freestockfootagearchive.com/wp-content/uploads/2020/10/Cyberpunk-Glitch-Motion-Background-Effect-Loop.mp4" type="video/mp4">
-            <!-- Fallback image if video fails -->
-            <img src="https://picsum.photos/id/1015/2000/1200" alt="Neon Background">
         </video>
 
-        <div class="relative z-10 max-w-7xl mx-auto px-8 py-24">
-            <div class="max-w-2xl">
-                <div class="text-[#00ffea] text-sm tracking-[6px] font-mono mb-6">NEON • CHAOS • CREATION</div>
-                
-                <h1 class="text-7xl md:text-8xl leading-none font-bold tracking-tighter text-white">
-                    DECISIONS.<br>
-                    DECISIONS.
-                </h1>
-                
-                <p class="mt-10 text-2xl text-gray-200">
-                    Code this weekend?<br>
-                    Generate absolute fire?<br>
-                    Or smoke tokens and ride the charts like a true degenerate?
-                </p>
-                
-                <div class="mt-16 flex flex-wrap gap-6">
-                    <a href="https://buy.stripe.com/7sI3dlgcQ4uL0gMeUW" target="_blank"
-                       class="brutal px-12 py-8 text-2xl font-bold hover:bg-white hover:text-black transition-all">
-                        SUPPORT THE CHAOS
-                    </a>
-                    <a href="mailto:epictechai@gmail.com"
-                       class="brutal px-12 py-8 text-2xl font-bold hover:bg-white hover:text-black transition-all">
-                        epictechai@gmail.com
-                    </a>
-                </div>
+        <div class="relative z-10 max-w-5xl mx-auto px-8 text-center md:text-left">
+            <div class="text-[#00ffff] text-xl tracking-[8px] mb-6">CODE • GENERATE • SMOKE • REPEAT</div>
+            
+            <h1 class="text-7xl md:text-8xl font-bold leading-none tracking-tighter">
+                DECISIONS.<br>DECISIONS.
+            </h1>
+            
+            <p class="mt-10 text-3xl max-w-2xl">
+                Code this weekend?<br>
+                Generate absolute fire?<br>
+                Or smoke tokens and ride the charts like a beautiful degenerate?
+            </p>
+
+            <div class="mt-16 flex flex-col sm:flex-row gap-6 justify-center md:justify-start">
+                <a href="https://buy.stripe.com/7sI3dlgcQ4uL0gMeUW" target="_blank"
+                   class="border-4 border-white px-16 py-8 text-2xl font-bold hover:bg-white hover:text-black transition-all">
+                    SUPPORT THE CHAOS
+                </a>
+                <a href="mailto:epictechai@gmail.com"
+                   class="border-4 border-[#ff00ff] px-16 py-8 text-2xl font-bold hover:bg-[#ff00ff] hover:text-black transition-all">
+                    epictechai@gmail.com
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- AGENTS -->
-    <section id="agents" class="py-32 border-t-4 border-b-4 border-white bg-black">
-        <div class="max-w-7xl mx-auto px-8">
-            <h2 class="text-6xl font-bold mb-20 text-center">THE AGENTS OF CHAOS</h2>
-            <div class="grid md:grid-cols-5 gap-8">
-                <div class="border-4 border-white p-10 hover:bg-white hover:text-black transition-all">🎬 VIDEO FORGE</div>
-                <div class="border-4 border-white p-10 hover:bg-white hover:text-black transition-all">🖼️ VISUAL ALCHEMIST</div>
-                <div class="border-4 border-white p-10 hover:bg-white hover:text-black transition-all">🎙️ SONIC ARCHITECT</div>
-                <div class="border-4 border-white p-10 hover:bg-white hover:text-black transition-all">📝 NARRATIVE CORE</div>
-                <div class="border-4 border-[#ff00ff] p-10 bg-white text-black">🧠 OMNI CONDUCTOR</div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="py-32 bg-black border-t-4 border-white">
-        <div class="max-w-4xl mx-auto text-center px-8">
-            <h2 class="text-6xl font-bold mb-8">WHAT ARE YOU DOING THIS WEEKEND?</h2>
-            <a href="mailto:epictechai@gmail.com" 
-               class="inline-block border-4 border-white px-16 py-8 text-3xl font-bold hover:bg-white hover:text-black transition-all">
-                epictechai@gmail.com
-            </a>
-        </div>
-    </section>
-
-    <footer class="py-12 text-center border-t-4 border-white text-sm tracking-widest">
-        © 2026 OMNIMEDIA AI • BUILT BY @SM0KEN42O • LFG
+    <footer class="py-12 text-center border-t-4 border-[#ff00ff] text-sm tracking-widest">
+        © 2026 OMNIMEDIA AI • BUILT DIFFERENT BY @SM0KEN42O
     </footer>
 </body>
 </html>
