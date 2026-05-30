@@ -3,67 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OMNIMEDIA AI</title>
+    <title>OMNIMEDIA AI — @Sm0ken42O</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&display=swap');
         
         body {
             font-family: 'Space Grotesk', sans-serif;
-            background: #111111;
-            color: #eeeeee;
-            line-height: 1.1;
+            background: #0a0a0a;
+            color: #f1f1f1;
         }
-        
-        .brutalist-border {
-            border: 4px solid #eeeeee;
+        .hero-bg {
+            background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.85)), 
+                        url('https://picsum.photos/id/1015/2000/1200') center/cover fixed;
         }
-        
-        .mono {
-            font-family: monospace;
+        .brutal {
+            border: 6px solid #ffffff;
         }
     </style>
 </head>
-<body class="min-h-screen">
+<body>
 
     <!-- NAV -->
-    <nav class="border-b-4 border-white bg-black py-8">
+    <nav class="fixed top-0 w-full z-50 bg-black border-b-4 border-white py-6">
         <div class="max-w-7xl mx-auto px-8 flex justify-between items-center">
-            <div class="flex items-center gap-6">
+            <div class="flex items-center gap-4">
                 <div class="w-12 h-12 border-4 border-white flex items-center justify-center text-4xl font-black">Ω</div>
-                <div>
-                    <span class="text-4xl font-bold tracking-tighter">OMNIMEDIA</span><br>
-                    <span class="text-xs tracking-[4px] mono">AI</span>
-                </div>
+                <div class="text-4xl font-bold tracking-tighter">OMNIMEDIA AI</div>
             </div>
-            <div class="flex gap-12 text-lg font-medium">
-                <a href="#agents" class="hover:text-white">AGENTS</a>
-                <a href="#contact" class="hover:text-white">CONTACT</a>
-            </div>
+            <div class="text-sm tracking-widest mono">BY @SM0KEN42O</div>
         </div>
     </nav>
 
     <!-- HERO -->
-    <section class="min-h-screen flex items-center border-b-4 border-white">
-        <div class="max-w-7xl mx-auto px-8 py-24">
-            <div class="max-w-3xl">
-                <div class="mono text-sm tracking-widest mb-6">SELF-HOSTED • MULTI-AGENT • RAW POWER</div>
+    <section class="hero-bg min-h-screen flex items-center pt-20">
+        <div class="max-w-7xl mx-auto px-8">
+            <div class="max-w-2xl">
+                <div class="text-red-500 text-sm tracking-[6px] font-mono mb-6">CODE • GENERATE • SMOKE TOKENS • REPEAT</div>
                 
-                <h1 class="text-8xl md:text-[7.5rem] font-bold leading-none tracking-tighter">
-                    ONE SYSTEM.<br>
-                    ALL MEDIA.
+                <h1 class="text-7xl md:text-8xl leading-none font-bold tracking-tighter">
+                    DECISIONS.<br>
+                    DECISIONS.
                 </h1>
                 
-                <p class="mt-12 text-3xl text-gray-400 max-w-lg">
-                    Five brutal agents.<br>
-                    No bullshit. No limits.
+                <p class="mt-10 text-2xl text-gray-300">
+                    Code this weekend?<br>
+                    Generate absolute fire?<br>
+                    Or just smoke tokens and stare at BTC charts like a beautiful degenerate?
                 </p>
                 
-                <div class="mt-16">
+                <div class="mt-16 flex flex-wrap gap-6">
                     <a href="https://buy.stripe.com/7sI3dlgcQ4uL0gMeUW" target="_blank"
-                       class="inline-block border-4 border-white px-16 py-8 text-2xl font-bold hover:bg-white hover:text-black transition-all">
-                        SUPPORT THE BUILD
+                       class="brutal px-12 py-8 text-2xl font-bold hover:bg-white hover:text-black transition-all">
+                        SUPPORT THE CHAOS
+                    </a>
+                    <a href="mailto:epictechai@gmail.com"
+                       class="brutal px-12 py-8 text-2xl font-bold hover:bg-white hover:text-black transition-all">
+                        HIT ME UP
                     </a>
                 </div>
             </div>
@@ -71,54 +68,49 @@
     </section>
 
     <!-- AGENTS -->
-    <section id="agents" class="py-32 border-b-4 border-white bg-black">
+    <section id="agents" class="py-32 border-t-4 border-b-4 border-white bg-black">
         <div class="max-w-7xl mx-auto px-8">
-            <h2 class="text-6xl font-bold mb-20">THE AGENTS</h2>
-            
+            <h2 class="text-6xl font-bold mb-20 text-center">THE FIVE AGENTS OF CHAOS</h2>
             <div class="grid md:grid-cols-5 gap-8">
-                <div class="brutalist-border p-10 bg-black">
-                    <div class="text-6xl mb-8">🎬</div>
+                <div class="border-4 border-white p-10 hover:bg-white hover:text-black transition-all">
+                    <div class="text-6xl mb-6">🎬</div>
                     <h3 class="text-3xl font-bold">VIDEO FORGE</h3>
-                    <p class="mt-6 text-gray-400">Cinematic video generation</p>
                 </div>
-                <div class="brutalist-border p-10 bg-black">
-                    <div class="text-6xl mb-8">🖼️</div>
+                <div class="border-4 border-white p-10 hover:bg-white hover:text-black transition-all">
+                    <div class="text-6xl mb-6">🖼️</div>
                     <h3 class="text-3xl font-bold">VISUAL ALCHEMIST</h3>
-                    <p class="mt-6 text-gray-400">Image generation & editing</p>
                 </div>
-                <div class="brutalist-border p-10 bg-black">
-                    <div class="text-6xl mb-8">🎙️</div>
+                <div class="border-4 border-white p-10 hover:bg-white hover:text-black transition-all">
+                    <div class="text-6xl mb-6">🎙️</div>
                     <h3 class="text-3xl font-bold">SONIC ARCHITECT</h3>
-                    <p class="mt-6 text-gray-400">Audio & music creation</p>
                 </div>
-                <div class="brutalist-border p-10 bg-black">
-                    <div class="text-6xl mb-8">📝</div>
+                <div class="border-4 border-white p-10 hover:bg-white hover:text-black transition-all">
+                    <div class="text-6xl mb-6">📝</div>
                     <h3 class="text-3xl font-bold">NARRATIVE CORE</h3>
-                    <p class="mt-6 text-gray-400">Story & world building</p>
                 </div>
-                <div class="brutalist-border p-10 bg-white text-black">
-                    <div class="text-6xl mb-8">🧠</div>
+                <div class="border-4 border-red-500 p-10 bg-white text-black">
+                    <div class="text-6xl mb-6">🧠</div>
                     <h3 class="text-3xl font-bold">OMNI CONDUCTOR</h3>
-                    <p class="mt-6">The central mind</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CONTACT -->
-    <section id="contact" class="py-32 bg-black">
-        <div class="max-w-4xl mx-auto px-8 text-center">
-            <h2 class="text-6xl font-bold mb-12">TALK TO THE BUILDER</h2>
+    <!-- FINAL CTA -->
+    <section class="py-32 bg-black border-t-4 border-white">
+        <div class="max-w-4xl mx-auto text-center px-8">
+            <h2 class="text-6xl font-bold mb-8">WHAT ARE YOU DOING THIS WEEKEND?</h2>
+            <p class="text-2xl text-gray-400 mb-12">Code. Generate. Or ride the wave.</p>
+            
             <a href="mailto:epictechai@gmail.com" 
-               class="text-4xl border-b-4 border-white pb-3 hover:text-gray-400 transition">
+               class="inline-block border-4 border-white px-16 py-8 text-3xl font-bold hover:bg-white hover:text-black transition-all">
                 epictechai@gmail.com
             </a>
-            
-            <div class="mt-24 text-sm mono text-gray-500">
-                BUILT BY @SM0K367 • OPEN SOURCE • NO CORPORATE SHIT
-            </div>
         </div>
     </section>
 
+    <footer class="py-12 text-center border-t-4 border-white text-sm tracking-widest mono">
+        © 2026 OMNIMEDIA AI • BUILT BY @SM0KEN42O • LFG
+    </footer>
 </body>
 </html>
